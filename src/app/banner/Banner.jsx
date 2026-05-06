@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Banner = () => {
     return (
@@ -7,9 +8,11 @@ const Banner = () => {
                 <h1 className='font-bold text-4xl md:text-5xl'>Friends to keep close in your life</h1>
                 <p className='text-[#64748B]'>Your personal shelf of meaningful connections. Browse, tend, and nurture the <br />
                     relationships that matter most.</p>
-                <button className='text-lg bg-[#244D3F] text-white px-3 py-2 rounded'>+ Add a Friend</button>
+                <Link href="/friends" className='inline-block text-lg bg-[#244D3F] text-white px-3 py-2 rounded'>
+                    + Add a Friend
+                </Link>
             </div>
-            <div className='flex flex-col md:flex-row  text-center justify-between items-center md: w-6/12 mx-auto '>
+            <div className='flex flex-col md:flex-row text-center justify-between items-center md:w-6/12 mx-auto'>
                 <div className='space-y-3.5 mb-5'>
                     <h3 className='font-semibold text-[#244D3F] text-4xl'>10</h3>
                     <p className='text-[#64748B]'>Total Friends</p>

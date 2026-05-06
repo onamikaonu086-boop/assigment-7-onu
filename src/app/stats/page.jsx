@@ -1,11 +1,10 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { PieChart, Cell, Pie,  Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const StatsPage = () => {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
+    const data = useMemo(() => {
+        if (typeof window === 'undefined') return [];
         const timeline = JSON.parse(localStorage.getItem('timeline')) || [];
 
         let call = 0;
@@ -22,8 +21,7 @@ const StatsPage = () => {
             { name: 'Message', value: message },
             { name: 'Video', value: video }
         ];
-
-        setData(chartData);
+        return chartData;
     }, []);
 
     const COLORS = ['#244D3F', '#7E35E1', '#37A163'];

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 
 
 const FriendCard = ({ friend }) => {
@@ -19,7 +20,13 @@ const FriendCard = ({ friend }) => {
         <Link className='text-center rounded-xl shadow hover:shadow-xl transition p-4 bg-white'
          href={`/friends/${friend.id}`}>
             <div className='p-4'>
-                <img className='w-16 h-16 mx-auto rounded-full' src={friend.picture} alt="" />
+                <Image
+                    className='w-16 h-16 mx-auto rounded-full'
+                    src={friend.picture}
+                    alt={friend.name}
+                    width={64}
+                    height={64}
+                />
             </div>
             <h3 className='text-lg font-semibold'>{friend.name}</h3>
             <p className='text-gray-600 text-xs'>{friend.last_contact}</p>
