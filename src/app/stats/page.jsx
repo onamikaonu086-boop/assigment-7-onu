@@ -27,12 +27,12 @@ const StatsPage = () => {
     const COLORS = ['#244D3F', '#7E35E1', '#37A163'];
 
     return (
-        <div className='p-6 md:w-8/12 mx-auto'>
-            <h1 className='text-2xl md:text-5xl font-bold mb-6'>Friendship Analytics</h1>
-            <div className='bg-white rounded-lg shadow-lg p-3 md:p-6'>
-                <h2 className='text-lg text-[#244D3F] md:text-xl font-semibold mb-4 md:p-8'>By Interaction Type</h2>
+        <div className='mx-auto w-full max-w-5xl p-4 sm:p-6'>
+            <h1 className='mb-6 text-2xl font-bold sm:text-4xl md:text-5xl'>Friendship Analytics</h1>
+            <div className='rounded-lg bg-white p-3 shadow-lg sm:p-6'>
+                <h2 className='mb-4 text-lg font-semibold text-[#244D3F] sm:text-xl md:px-2'>By Interaction Type</h2>
                 <div>
-                    <ResponsiveContainer width="100%" height={300}>
+                    <ResponsiveContainer width="100%" height={320}>
                         <PieChart>
                             <Pie
                                 data={data}

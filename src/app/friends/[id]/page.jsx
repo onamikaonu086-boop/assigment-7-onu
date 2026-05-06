@@ -41,8 +41,8 @@ export default function FriendDetailPage() {
   };
 
   return (
-    <div className="md:w-8/12 flex flex-col md:flex-row gap-6 p-6 mx-auto shadow-lg rounded-lg mt-10">
-      <div className="text-center lg:max-w-md mx-auto p-5 mr-10">
+    <div className="mx-auto mt-8 flex w-full max-w-6xl flex-col gap-6 rounded-lg bg-white p-4 shadow-lg sm:p-6 md:flex-row">
+      <div className="mx-auto w-full max-w-sm text-center lg:max-w-md">
         <Image
           src={friend.picture}
           alt={friend.name}
@@ -60,7 +60,7 @@ export default function FriendDetailPage() {
         <p className="text-gray-700 mt-3 font-semibold italic">{friend.note}</p>
         <p className="text-gray-700">Preferred: {friend.preferred_contact}</p>
 
-        <div className="mt-6">
+        <div className="mt-6 space-y-2">
           <button className="w-full btn bg-gray-100 py-2 rounded">
             <FaBell /> Snooze 2 weeks
           </button>
@@ -73,8 +73,8 @@ export default function FriendDetailPage() {
         </div>
       </div>
 
-      <div className="md:col-span-2 space-y-6 p-4 w-full mx-auto">
-        <div className="flex flex-col md:flex-row justify-between space-y-4 md:w-3/4 mx-auto text-center gap-4">
+      <div className="w-full space-y-6 p-1 sm:p-2">
+        <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-2 lg:grid-cols-3">
           <div className="bg-white p-4 shadow rounded text-center">
             <h3 className="font-bold text-3xl">{friend.days_since_contact}</h3>
             <p className="text-gray-600">Days Since Contact</p>
@@ -90,7 +90,7 @@ export default function FriendDetailPage() {
         </div>
 
         <div className="bg-white p-4 items-center">
-          <div className="mb-1 flex justify-between items-center">
+          <div className="mb-1 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <h3 className="font-semibold text-[#244D3F]">Relationship Goal</h3>
             <span className="btn rounded-full text-xs">Edit</span>
           </div>
@@ -100,11 +100,11 @@ export default function FriendDetailPage() {
 
           <div className="mt-6 border-t border-gray-200 pt-8">
             <h3 className="font-semibold text-[#244D3F]">Quick Check-In</h3>
-            <div className="mt-2 flex justify-between text-center items-center md:w-1/2 mx-auto">
+            <div className="mt-2 grid grid-cols-1 gap-3 text-center sm:grid-cols-2 lg:grid-cols-3">
               <div className="p-3 shadow-sm">
                 <button
                   onClick={() => handleAddToTimeline("call")}
-                  className="bg-gray-200 px-5 py-2 rounded hover:bg-gray-300"
+                  className="w-full rounded bg-gray-200 px-5 py-2 hover:bg-gray-300"
                 >
                   <FaPhone className="w-5 h-5 inline-block mr-2" />
                   Call
@@ -113,7 +113,7 @@ export default function FriendDetailPage() {
               <div className="p-3 shadow">
                 <button
                   onClick={() => handleAddToTimeline("message")}
-                  className="bg-gray-200 px-5 py-2 rounded hover:bg-gray-300"
+                  className="w-full rounded bg-gray-200 px-5 py-2 hover:bg-gray-300"
                 >
                   <FaMessage className="w-5 h-5 inline-block mr-2" />
                   Text
@@ -122,7 +122,7 @@ export default function FriendDetailPage() {
               <div className="p-3 shadow">
                 <button
                   onClick={() => handleAddToTimeline("video")}
-                  className="bg-gray-200 px-5 py-2 rounded hover:bg-gray-300"
+                  className="w-full rounded bg-gray-200 px-5 py-2 hover:bg-gray-300"
                 >
                   <FaVideo className="w-5 h-5 inline-block mr-2" />
                   Video
