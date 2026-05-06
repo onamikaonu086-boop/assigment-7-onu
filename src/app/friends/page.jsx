@@ -1,13 +1,9 @@
 "use client"
 import React from 'react';
-import friends from '../../data/friends.json'
-import Image from 'next/image';
-import Call from '../../../assets/call.png';
-import Text from '../../../assets/text.png';
-import Video from '../../../assets/video.png';
+import friends from '../data/friends.json'
 import { toast } from 'react-toastify';
 import { useParams } from 'next/navigation';
-import { FaBell, FaDeleteLeft, FaTrash } from 'react-icons/fa6';
+import { FaBell, FaDeleteLeft, FaTrash, FaPhone, FaMessage, FaVideo } from 'react-icons/fa6';
 import { FaArchive, FaShopify, FaVectorSquare, FaVestPatches } from 'react-icons/fa';
 
 
@@ -111,7 +107,7 @@ const FriendDetailPage = ({ params }) => {
                                 <button
                                     onClick={() => handleAddToTimeline('call')}
                                     className='bg-gray-200 px-5 py-2 rounded hover:bg-gray-300'>
-                                    <Image src={Call} alt="call" className='w-6 h-6 inline-block mr-2' />
+                                    <FaPhone className='w-5 h-5 inline-block mr-2' />
                                     Call
                                 </button>
                             </div>
@@ -119,7 +115,7 @@ const FriendDetailPage = ({ params }) => {
                                 <button
                                     onClick={() => handleAddToTimeline('message')}
                                     className='bg-gray-200 px-5 py-2 rounded hover:bg-gray-300'>
-                                    <Image src={Text} alt="text" className='w-6 h-6 inline-block mr-2' />
+                                    <FaMessage className='w-5 h-5 inline-block mr-2' />
                                     Text
                                 </button>
                             </div>
@@ -128,7 +124,7 @@ const FriendDetailPage = ({ params }) => {
                                 <button
                                     onClick={() => handleAddToTimeline('video')}
                                     className='bg-gray-200 px-5 py-2 rounded hover:bg-gray-300 '>
-                                    <Image src={Video} alt="video" className='w-6 h-6 inline-block mr-2' />
+                                    <FaVideo className='w-5 h-5 inline-block mr-2' />
                                     Video
                                 </button>
                             </div>
