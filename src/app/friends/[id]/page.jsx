@@ -48,7 +48,7 @@ export default function FriendDetailPage() {
           alt={friend.name}
           width={80}
           height={80}
-          className="h-20 w-20 rounded-full mx-auto"
+          className="w-20 h-20 rounded-full mx-auto"
         />
         <h2 className="text-lg font-semibold mt-2">{friend.name}</h2>
         <div className={`mt-1 px-2 w-20 mx-auto py-1 text-xs rounded-full ${statusColor}`}>
@@ -61,13 +61,13 @@ export default function FriendDetailPage() {
         <p className="text-gray-700">Preferred: {friend.preferred_contact}</p>
 
         <div className="mt-6">
-          <button className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-gray-100 px-4 py-2 font-semibold transition hover:bg-gray-200">
+          <button className="w-full btn bg-gray-100 py-2 rounded">
             <FaBell /> Snooze 2 weeks
           </button>
-          <button className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gray-100 px-4 py-2 font-semibold transition hover:bg-gray-200">
+          <button className="w-full btn bg-gray-100 py-2 rounded">
             <FaArchive /> Archive
           </button>
-          <button className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gray-100 px-4 py-2 font-semibold text-red-500 transition hover:bg-red-100">
+          <button className="w-full btn text-red-500 bg-gray-100 py-2 rounded hover:bg-red-100">
             <FaTrash /> Delete
           </button>
         </div>
@@ -92,7 +92,7 @@ export default function FriendDetailPage() {
         <div className="bg-white p-4 items-center">
           <div className="mb-1 flex justify-between items-center">
             <h3 className="font-semibold text-[#244D3F]">Relationship Goal</h3>
-            <span className="rounded-full border border-gray-200 px-3 py-1 text-xs font-medium">Edit</span>
+            <span className="btn rounded-full text-xs">Edit</span>
           </div>
           <p className="text-gray-600">
             Connect every <span className="font-semibold">{friend.goal} days</span>

@@ -10,8 +10,8 @@ const FriendCard = ({ friend }) => {
             ? "bg-yellow-100 text-yellow-600"
             : "bg-green-100 text-green-600";
 
-    const tagColor = friend.tag === "WORK" ? "bg-blue-100 text-blue-600" 
-        : friend.tag === "family"
+    const tagColor = friend.tag?.toLowerCase() === "work" ? "bg-blue-100 text-blue-600"
+        : friend.tag?.toLowerCase() === "family"
             ? "bg-purple-100 text-purple-600"
             : "bg-blue-100 text-blue-600";
 

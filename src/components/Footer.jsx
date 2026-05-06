@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import FooterLogo from '../assets/logo-xl.png'
@@ -14,18 +15,18 @@ const Footer = () => {
                 <p className='mt-2 text-gray-400'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
                 <p className='mt-4 font-semibold text-white'>Social Links</p>
                 <div className='flex justify-center gap-4 mt-2'>
-                    <a href="https://facebook.com" target="_blank" rel="noreferrer"
+                    <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer"
                         className='text-gray-400 hover:text-white'>
                         <Image src={facebook} alt="Facebook" className='w-6 h-6' />
-                    </a>
-                    <a href="https://x.com" target="_blank" rel="noreferrer"
+                    </Link>
+                    <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer"
                         className='text-gray-400 hover:text-white'>
                         <Image src={twitter} alt="Twitter" className='w-6 h-6' />
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noreferrer"
+                    </Link>
+                    <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer"
                         className='text-gray-400 hover:text-white'>
                         <Image src={instagram} alt="Instagram" className='w-6 h-6' />
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -33,17 +34,17 @@ const Footer = () => {
                 <p className='text-gray-500 text-xs'>© 2026 KeenKeeper. All rights reserved.</p>
                 <ul className='flex flex-col md:flex-row md:gap-5 mt-2 text-xs space-y-2 md:space-y-0'>
                     <li>
-                        <Link href="/" className='text-gray-500 hover:text-white'>
+                        <Link href="#" className='text-gray-500 hover:text-white'>
                             Privacy Policy
                         </Link>
                     </li>
                     <li>
-                        <Link href="/" className='text-gray-500 hover:text-white'>
+                        <Link href="#" className='text-gray-500 hover:text-white'>
                             Terms of Service
                         </Link>
                     </li>
                     <li>
-                        <Link href="/" className='text-gray-500 hover:text-white'>
+                        <Link href="#" className='text-gray-500 hover:text-white'>
                             Cookies
                         </Link>
                     </li>

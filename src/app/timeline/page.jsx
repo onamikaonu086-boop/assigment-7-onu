@@ -28,20 +28,13 @@ const TimelinePage = () => {
         <div className='p-4 md:p-6 md:w-8/12 mx-auto'>
                 <h1 className='text-3xl font-bold text-left'>Timeline</h1>
             <div className='my-4 w-full flex justify-between gap-4'>
-                <select
-                    value={filter}
-                    onChange={(e) => setFilter(e.target.value)}
-                    className='rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium'
-                >
+                <select value={filter} onChange={(e) => setFilter(e.target.value)} className='btn'>
                     <option value='all'>All</option>
                     <option value='call'>Calls</option>
                     <option value='message'>Messages</option>
                     <option value='video'>Video Calls</option>
                 </select>
-                <button
-                    onClick={handleClearTimeline}
-                    className='inline-flex items-center gap-2 rounded-md border border-red-200 bg-red-100 px-4 py-2 font-semibold text-red-600 transition hover:bg-red-600 hover:text-white'
-                >
+                <button onClick={handleClearTimeline} className='btn btn-outline bg-red-100 text-red-600 hover:bg-red-600 hover:text-white'>
                    <FaDeleteLeft /> Clear
                 </button>
             </div>

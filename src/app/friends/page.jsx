@@ -3,7 +3,7 @@ import friends from "../data/friends.json";
 
 export default function FriendsPage() {
   return (
-    <div className="w-8/12 mx-auto mt-10">
+    <div className="mx-auto mt-10 w-full max-w-6xl px-4">
       <h1 className="text-3xl font-bold mb-6">All Friends</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-11/12 gap-9 mx-auto">
         {friends.map((friend) => (

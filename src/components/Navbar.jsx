@@ -15,12 +15,14 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 shadow-sm backdrop-blur md:px-12">
-      <div className="mx-auto flex min-h-16 w-full max-w-6xl items-center justify-between px-4">
+    <div className="navbar bg-base-100 shadow-lg md:px-12">
+      <div className="flex-1">
         <Link href="/" className="inline-flex items-center">
           <Image src={logo} alt="KeenKeeper logo" className="h-8 w-auto" priority />
         </Link>
-        <ul className="flex items-center gap-1 md:gap-3">
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal items-center px-1 gap-1 md:gap-3">
           <li>
             <Link href="/" className={navLinkClass(pathname === "/")}>
               <FaHome className="inline-block mr-1" />
@@ -49,7 +51,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   );
 };
 
